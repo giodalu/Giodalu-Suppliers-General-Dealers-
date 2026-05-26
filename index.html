@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIODALU Suppliers & General Dealers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #1a365d; --primary-light: #2b6cb0; --accent: #319795; --dark: #2c3e50; --light: #fafbfd; --white: #ffffff; --shadow: 0 10px 30px rgba(0, 0, 0, 0.05); --transition: all 0.3s ease; }
+        body { font-family: 'Inter', sans-serif; color: var(--dark); background-color: var(--light); line-height: 1.6; }
+        h1, h2, h3, .logo-text { font-family: 'Lexend', sans-serif; font-weight: 700; }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        header { background-color: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.02); border-bottom: 1px solid #e2e8f0; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+        .logo-text { font-size: 1.5rem; color: var(--primary); letter-spacing: 0.5px; }
+        .logo-text span { color: var(--accent); font-size: 0.9rem; display: block; font-weight: 400; margin-top: -4px; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav ul a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 0.95rem; transition: var(--transition); }
+        nav ul a:hover { color: var(--accent); }
+        .hero { padding: 180px 0 100px 0; background: linear-gradient(135deg, #112233 0%, #1a365d 100%); color: var(--white); text-align: center; position: relative; overflow: hidden; }
+        .hero h1 { font-size: 3.5rem; line-height: 1.2; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .hero p { font-size: 1.2rem; color: #cbd5e0; max-width: 600px; margin: 0 auto 40px auto; font-weight: 300; }
+        .btn { display: inline-block; background-color: var(--accent); color: var(--white); padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; letter-spacing: 0.5px; transition: var(--transition); box-shadow: 0 4px 15px rgba(49, 151, 149, 0.3); }
+        .btn:hover { background-color: #287e7c; transform: translateY(-2px); }
+        .services { padding: 100px 0; }
+        .section-header { text-align: center; margin-bottom: 60px; }
+        .section-header h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 15px; }
+        .section-header p { color: #718096; max-width: 500px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background-color: var(--white); padding: 40px 30px; border-radius: 12px; border: 1px solid #edf2f7; box-shadow: var(--shadow); transition: var(--transition); }
+        .icon { font-size: 2rem; margin-bottom: 20px; display: inline-block; background: #ebf8ff; width: 60px; height: 60px; line-height: 60px; text-align: center; border-radius: 10px; }
+        .card:nth-child(1) .icon { background: #ebf8ff; color: #2b6cb0; }
+        .card:nth-child(2) .icon { background: #e6fffa; color: #319795; }
+        .card:nth-child(3) .icon { background: #feebc8; color: #c05621; }
+        .card:nth-child(4) .icon { background: #f0fff4; color: #2f855a; }
+        .card:nth-child(5) .icon { background: #faf5ff; color: #6b46c1; }
+        .card h3 { font-size: 1.3rem; margin-bottom: 15px; color: var(--primary); }
+        .card p { color: #4a5568; font-size: 0.95rem; margin-bottom: 20px; }
+        .card ul { list-style: none; }
+        .card ul li { font-size: 0.9rem; color: #2d3748; margin-bottom: 8px; position: relative; padding-left: 15px; }
+        .card ul li::before { content: "•"; color: var(--accent); position: absolute; left: 0; }
+        .vision-banner { background-color: var(--primary); color: var(--white); padding: 80px 0; text-align: center; }
+        .vision-banner h2 { font-size: 2rem; margin-bottom: 15px; }
+        .vision-banner p { max-width: 700px; margin: 0 auto; color: #a0aec0; font-size: 1.1rem; }
+        .contact { padding: 100px 0; background-color: var(--white); }
+        .contact-box { background: var(--light); border-radius: 16px; padding: 50px; border: 1px solid #e2e8f0; max-width: 800px; margin: 0 auto; text-align: center; }
+        .contact-box h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 15px; }
+        .contact-box p { margin-bottom: 30px; color: #4a5568; }
+        footer { background-color: #0f172a; color: #94a3b8; padding: 40px 0; text-align: center; font-size: 0.9rem; }
+        footer strong { color: var(--white); }
+        @media (max-width: 768px) { .hero h1 { font-size: 2.3rem; } nav ul { display: none; } .contact-box { padding: 30px 20px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <div class="logo-text">GIODALU<span>Suppliers & General Dealers</span></div>
+            <nav><ul><li><a href="#home">Home</a></li><li><a href="#services">Our Sectors</a></li><li><a href="#contact">Inquire Now</a></li></ul></nav>
+        </div>
+    </header>
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Reliability Delivered Across Multiple Industries</h1>
+            <p>Your premium gateway partner providing absolute excellence across IT, high-volume logistics, farming operations, and modern real estate markets.</p>
+            <a href="#contact" class="btn">Connect With Us</a>
+        </div>
+    </section>
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Pillars of Expertise</h2>
+                <p>Delivering elite solutions engineered for growth, convenience, and industrial-scale dependability.</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="icon">📦</div>
+                    <h3>Wholesale Computer Supply</h3>
+                    <p>High-volume commercial computer supply and premium tech hardware peripherals optimized for businesses and large institutional scales.</p>
+                    <ul><li>Enterprise laptops & heavy duty workstations</li><li>High-yield monitors, keyboards & mouse combos</li><li>Bulk accessories, networking cables & storage</li></ul>
+                </div>
+                <div class="card">
+                    <div class="icon">🌐</div>
+                    <h3>Information Technology Services</h3>
+                    <p>End-to-end technical network engineering, corporate support, and data defenses engineered to optimize your daily operational workspace.</p>
+                    <ul><li>Secure network architecture & installations</li><li>Dedicated corporate helpdesk IT support solutions</li><li>Automated secure business cloud backup solutions</li></ul>
+                </div>
+                <div class="card">
+                    <div class="icon">🚚</div>
+                    <h3>Courier & Logistics Services</h3>
+                    <p>Highly secure, streamlined distribution lines ensuring that your critical merchandise and time-sensitive packages reach destinations safely.</p>
+                    <ul><li>Express commercial document & parcel delivery</li><li>Corporate freight distribution logistics</li><li>Punctual scheduled pickups & transit pipelines</li></ul>
+                </div>
+                <div class="card">
+                    <div class="icon">🚜</div>
+                    <h3>Mixed Farming Production</h3>
+                    <p>Sustainable, modern agricultural framework delivering high-yield consumer food crops and exceptional livestock management practices.</p>
+                    <ul><li>Wholesale crop supply provisions</li><li>Premium commercial livestock cultivation</li><li>Local organic farming contract deliveries</li></ul>
+                </div>
+                <div class="card">
+                    <div class="icon">🏢</div>
+                    <h3>Real Estate Services</h3>
+                    <p>Elite commercial property spaces, property portfolio leasing management, and strategic guidance across premium land investments.</p>
+                    <ul><li>Corporate offices & physical retail space management</li><li>Residential listings & property acquisitions</li><li>Commercial & agricultural land valuation</li></ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="vision-banner">
+        <div class="container">
+            <h2>Trust • Innovation • Growth</h2>
+            <p>At GIODALU, we leverage cross-industry versatility to build lasting corporate relationships rooted in exceptional performance and pristine business execution.</p>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-box">
+                <h3>Launch a Project With Us</h3>
+                <p>Have a custom order, specific wholesale inquiry, or need to discuss enterprise-level operations?</p>
+                <a href="#" class="btn" style="background-color: #25D366;">💬 Message Us on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+    <footer><div class="container"><p>&copy; 2026 <strong>GIODALU Suppliers & General Dealers</strong>. All Rights Reserved.</p></div></footer>
+</body>
+</html>
